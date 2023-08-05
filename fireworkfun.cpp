@@ -1,5 +1,5 @@
 #include <iostream>
-//#include <unistd.h> // usleep(t) where t is time in microseconds
+#include <unistd.h> // usleep(t) where t is time in microseconds
 #include <vector>
 #include <cmath>
 #include <string.h>
@@ -201,7 +201,7 @@ class Fireworks{
     
     while(curr_radius < (radius+1)) { // replace "." with "*" 
       fw1.explode_firework_asterisk(fw_matrix, curr_radius, radius);
-      std::usleep(450000);
+      usleep(450000);
       curr_radius++;
       std::cout << clear_output;
       fw1.print_matrix(fw_matrix);
